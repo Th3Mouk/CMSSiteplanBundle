@@ -1,0 +1,31 @@
+{
+    "name": "th3mouk/cms-siteplan-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony CMSSiteplanBundle to generate site plan of SonataPageBundle and personnals routes",
+    "keywords": [
+        "sonata", "cms", "site", "plan", "siteplan"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jérémy Marodon",
+            "email": "marodon.jeremy@gmail.com"
+        }
+    ],
+    "require": {
+        "sonata-project/page-bundle": "^2.3"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Th3Mouk\\CMSSiteplanBundle\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
