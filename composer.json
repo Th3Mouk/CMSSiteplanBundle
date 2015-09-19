@@ -1,7 +1,7 @@
 {
     "name": "th3mouk/cms-siteplan-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony CMSSiteplanBundle to generate site plan of SonataPageBundle and personnals routes",
+    "description": "Symfony CMSSiteplanBundle to generate site plan of SonataPageBundle and personals routes",
     "keywords": [
         "sonata", "cms", "site", "plan", "siteplan"
     ],
