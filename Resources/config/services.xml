@@ -5,16 +5,20 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="th3mouk.cms.siteplan.builder.class">Sonata\BlockBundle\Block\Service\ContainerBlockService</parameter>
+        <parameter key="th3mouk.cms.siteplan.builder.class">Th3Mouk\CMSSiteplanBundle\Menu\BasePlanBuilder</parameter>
+        <parameter key="th3mouk.cms.siteplan.menu.item">Knp\Menu\MenuItem</parameter>
     </parameters>
 
-    <!--
     <services>
-        <service id="th3mouk.cms.siteplan.builder" class="Th3Mouk\CMSSiteplanBundle\Example">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="th3mouk.cms.siteplan.builder" class="%th3mouk.cms.siteplan.builder.class%">
+            <argument type="service" id="knp_menu.factory" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+        </service>
+
+        <service id="th3mouk.cms.siteplan.menu" class="%th3mouk.cms.siteplan.menu.item%">
+            <argument type="service" id="request_stack"/>
+            <factory service="th3mouk.cms.siteplan.builder" method="createPlanMenu"/>
+            <tag name="knp_menu.menu" alias="th3mouk.cms.siteplan.menu"/>
         </service>
     </services>
-    -->
 </container>
