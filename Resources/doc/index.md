@@ -1,23 +1,25 @@
 Usage
 =====
 
-The usage of this, is the most simple of the universe (almost :sparkles:).
+The bundle usage, is the most simple of the universe (almost :sparkles:).
 
 Add to your template:
 
 
-```
+```twig
 {{ knp_menu_render('th3mouk.cms.siteplan.menu') }}
 ```
 
+Congrats ! You're done ! :clap::tada:
+
 This menu is powered by [KnpMenu](https://github.com/KnpLabs/KnpMenu)
 
-Thanks to the [SiteSelector](https://github.com/sonata-project/SonataPageBundle/blob/master/Site/SiteSelectorInterface.php), this tag offers the possibility to use it on all your sub-site without parameters or configuration. 
+Thanks to the [SiteSelector](https://github.com/sonata-project/SonataPageBundle/blob/master/Site/SiteSelectorInterface.php), this tag offers the possibility to use it on all your [sub-sites](https://sonata-project.org/bundles/page/2-2/doc/reference/multisite.html) without parameters or configuration. 
 
 ##Render
 
 :exclamation: If you want to personalize the render, you can add the template option of the [KnpMenuBundle](https://github.com/KnpLabs/KnpMenuBundle), or a lot of others.
-```
+```twig
 {{ knp_menu_render('th3mouk.cms.siteplan.menu', {template: 'AppBundle:Menu:plan_menu.html.twig'}) }}
 ```
 
@@ -37,10 +39,9 @@ To add elements before and after the content generation.
 
 I know example is most efficient than explanation :grin:
 
-First of all you need a listener to ours events:
+First of all we need a listener to ours events:
 
-```
-
+```php
 namespace AppBundle\EventListener;
 
 use Th3Mouk\CMSSiteplanBundle\Event\MenuPlanEvent;
@@ -69,7 +70,7 @@ And to finish (seriously ? :scream:)
 Declare your listener with the `kernel.event_listener` tag.
 Bind an `event` to a class `method`.
  
-```
+```yml
 services:
     app.plan.menu_listener:
         class: AppBundle\EventListener\MenuPlanListener
