@@ -13,13 +13,13 @@ The aim is to simplify the website plan generation this the SonataPageBundle.
 
 Add to the `appKernel.php`:
 
-```
+```php
 new Th3Mouk\CMSSiteplanBundle\Th3MoukCMSSiteplanBundle(),
 ```
 
 ## Usage
 
-```
+```twig
 {{ knp_menu_render('th3mouk.cms.siteplan.menu') }}
 ```
 
