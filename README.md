@@ -9,6 +9,22 @@ This bundle for [Symfony](http://symfony.com/) providing a site plan for your we
 
 `php composer.phar require th3mouk/cms-siteplan-bundle 1.0.x-dev`
 
+Add to the `appKernel.php`:
+
+```
+new Th3Mouk\CMSSiteplanBundle\Th3MoukCMSSiteplanBundle(),
+```
+
+## Usage
+
+```
+{{ knp_menu_render('th3mouk.cms.siteplan.menu') }}
+```
+
+The documentation is available [here](/Resources/doc/index.md)
+
+For more understanding, refer to the [KnpMenuBundle Documentation](http://symfony.com/doc/current/bundles/KnpMenuBundle/index.html)
+
 ## Please
 
 Feel free to improve this bundle.
