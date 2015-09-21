@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony CMSSiteplanBundle to generate site plan of SonataPageBundle and personals routes",
     "keywords": [
-        "sonata", "cms", "site", "plan", "siteplan"
+        "sonata", "cms", "site", "plan", "siteplan", "sitemap", "symfony", "bundle"
     ],
     "license": "MIT",
     "authors": [
