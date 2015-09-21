@@ -5,6 +5,7 @@ namespace Th3Mouk\CMSSiteplanBundle\Menu;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Th3Mouk\CMSSiteplanBundle\Event\MenuPlanEvent;
 use Knp\Menu\FactoryInterface;
+use Sonata\PageBundle\Model\PageInterface;
 use Sonata\PageBundle\Model\PageManagerInterface;
 use Sonata\PageBundle\Site\SiteSelectorInterface;
 
@@ -81,7 +82,7 @@ class BasePlanBuilder
         $this->iterate($menu[$page->getName()], $page);
     }
 
-    public function iterate($menu, $page)
+    public function iterate($menu, PageInterface $page)
     {
         foreach ($page->getChildren() as $page) {
             if ($page->isHybrid() || !$page->getUrl()) {
