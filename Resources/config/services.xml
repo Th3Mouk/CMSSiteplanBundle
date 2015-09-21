@@ -14,6 +14,7 @@
             <argument type="service" id="knp_menu.factory" />
             <argument type="service" id="sonata.page.site.selector" />
             <argument type="service" id="sonata.page.manager.page" />
+            <argument type="service" id="event_dispatcher" />
         </service>
 
         <service id="th3mouk.cms.siteplan.menu" class="%th3mouk.cms.siteplan.menu.item%">
