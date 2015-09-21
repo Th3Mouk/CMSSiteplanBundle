@@ -10,9 +10,10 @@
     </parameters>
 
     <services>
-        <service id="th3mouk.cms.siteplan.builder" class="%th3mouk.cms.siteplan.builder.class%">
+        <service id="th3mouk.cms.siteplan.builder" class="%th3mouk.cms.siteplan.builder.class%" scope="prototype">
             <argument type="service" id="knp_menu.factory" />
-            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="service" id="sonata.page.site.selector" />
+            <argument type="service" id="sonata.page.manager.page" />
         </service>
 
         <service id="th3mouk.cms.siteplan.menu" class="%th3mouk.cms.siteplan.menu.item%">
