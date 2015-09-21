@@ -9,7 +9,7 @@ The aim is to simplify the website plan generation this the SonataPageBundle.
 
 ## Installation
 
-`php composer.phar require th3mouk/cms-siteplan-bundle 1.0.x-dev`
+`php composer.phar require th3mouk/cms-siteplan-bundle ^1.0`
 
 Add to the `appKernel.php`:
 
