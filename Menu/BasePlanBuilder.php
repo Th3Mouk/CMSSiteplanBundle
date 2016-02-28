@@ -1,13 +1,20 @@
 <?php
 
+/*
+ * (c) Jérémy Marodon <marodon.jeremy@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Th3Mouk\CMSSiteplanBundle\Menu;
 
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Th3Mouk\CMSSiteplanBundle\Event\MenuPlanEvent;
 use Knp\Menu\FactoryInterface;
 use Sonata\PageBundle\Model\PageInterface;
 use Sonata\PageBundle\Model\PageManagerInterface;
 use Sonata\PageBundle\Site\SiteSelectorInterface;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Th3Mouk\CMSSiteplanBundle\Event\MenuPlanEvent;
 
 class BasePlanBuilder
 {
