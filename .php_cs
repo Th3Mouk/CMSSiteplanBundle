@@ -11,10 +11,7 @@ EOF;
 
 Symfony\CS\Fixer\Contrib\HeaderCommentFixer::setHeader($header);
 
-$finder = Symfony\CS\Finder\DefaultFinder::create()
-    ->in(array(__DIR__))
-    ->exclude(array('Tests/Fixtures'))
-;
+$finder = Symfony\CS\Finder\DefaultFinder::create();
 
 return Symfony\CS\Config\Config::create()
     ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
@@ -25,6 +22,5 @@ return Symfony\CS\Config\Config::create()
         'long_array_syntax',
         'php_unit_construct',
     ))
-    ->setUsingCache(true)
     ->finder($finder)
 ;
